@@ -1,0 +1,27 @@
+---
+
+type Props = {
+  link: {
+    id: number;
+    title: string;
+    url: string;
+    description: string;
+    isRead: boolean;
+  };
+};
+
+const { link } = Astro.props;
+---
+<article>
+<div>
+{link.isRead}
+{link.id}
+{link.title}
+{link.description}
+<a href={link.url}>Link</a>
+</div>
+</article>
+
+<script>
+    
+</script>
