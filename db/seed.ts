@@ -8,21 +8,21 @@ export default async function seed() {
 			url: "https://chrispennington.blog",
 			description: "This is my blog about web development and design.",
 			isRead: true,
-			customerId: 1, // Add the missing property 'customerId'
+			customerId: 1
 		},
 		{
 			title: "Google",
 			url: "https://google.com",
 			description: "I found this cool site that can search for anything.",
 			isRead: false,
-			customerId: 1, // Add the missing property 'customerId'
+			customerId: 2
 		},
 		{
 			title: "GitHub",
 			url: "https://github.com",
 			description: "I found this cool site that can hold repositories.",
 			isRead: false,
-			customerId: 1, // Add the missing property 'customerId'
+			customerId: 3
 		}
 	]);
 	await db.insert(Customer).values([
