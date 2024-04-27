@@ -14,14 +14,11 @@ const { link } = Astro.props;
 ---
 <article>
 <div>
-{link.isRead}
-{link.id}
-{link.title}
-{link.description}
-<a href={link.url}>Link</a>
+  {link.isRead ? <p>Read</p> : <p>Unread</p>}
+  <p>ID: {link.id}</p>
+  <h2>{link.title}</h2>
+  <p>{link.description}</p>
+  <a href={link.url}>Link</a>
 </div>
 </article>
 
-<script>
-    
-</script>

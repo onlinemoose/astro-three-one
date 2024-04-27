@@ -9,14 +9,13 @@ const links = await db.select().from(Link)
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<div class="grid gap-6">
-			{links.map((link) => <LinkCard link={link} />)}
-		</div>
 
 		<div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-			<div class="bg-blue-500 text-white p-4">Content 1</div>
-			<div class="bg-blue-500 text-white p-4">Content 2</div>
-			<div class="bg-blue-500 text-white p-4">Content 3</div>
+			{links.map((link) => 
+				<div class="bg-blue-500 text-white p-4">
+					<LinkCard link={link} />
+				</div>
+			)}
 		</div>
 
 	</main>
