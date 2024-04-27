@@ -7,6 +7,7 @@ type Props = {
     url: string;
     description: string;
     isRead: boolean;
+    customerId: number;
   };
 };
 
@@ -16,6 +17,7 @@ const { link } = Astro.props;
 <div>
   {link.isRead ? <p>Read</p> : <p>Unread</p>}
   <p>ID: {link.id}</p>
+  <p>Customer ID: {link.customerId}</p>
   <h2>{link.title}</h2>
   <p>{link.description}</p>
   <a href={link.url}>Link</a>
