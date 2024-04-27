@@ -19,8 +19,7 @@ const Link = defineTable({
     url: column.text(),
     description: column.text(),
     isRead: column.boolean({ default: false }),
-    customerId: column.number({ default: 0 })
-    // customerId: column.number({ references: () => Customer.columns.id })
+    customerId: column.number({ default: 0, references: () => Customer.columns.id })
   }
 })
 
