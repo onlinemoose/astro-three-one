@@ -14,13 +14,25 @@ type Props = {
 const { link } = Astro.props;
 ---
 <article>
-<div>
-  {link.isRead ? <p>Read</p> : <p>Unread</p>}
-  <p>ID: {link.id}</p>
-  <p>Customer ID: {link.customerId}</p>
-  <h2>{link.title}</h2>
-  <p>{link.description}</p>
-  <a href={link.url}>Link</a>
-</div>
+
+  <div class="card w-96 bg-base-100 shadow-xl">
+    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+    <div class="card-body">
+      <h2 class="card-title">
+        {link.title}
+        <div class="badge badge-secondary">
+          {link.isRead ? <p>Read</p> : <p>Unread</p>}
+        </div>
+      </h2>
+      <p>{link.description}</p>
+      <div class="badge badge-outline">ID: {link.id}</div> 
+      <div class="badge badge-outline">Customer: {link.customerId}</div>
+      
+      <div class="card-actions justify-end">
+        <div class="card-actions"><button class="btn btn-sm"><a href={link.url}>Link</a></button></div>
+      </div>
+    </div>
+  </div>
+
 </article>
 
